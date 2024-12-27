@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>血氧偵測</title>
+
+	<style type="text/css">
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #f0f0f0;
+		font-family: Verdana, sans-serif;
+		height: auto;
+		margin: 0;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+		height: 90%;
+		max-width: 800px;
+		background-color: white;
+		padding: 30px;
+		margin: 30px;
+		border-radius: 3px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.content {
+		text-align: center;
+		margin-top: 24px;
+	}
+
+	.content1 {
+		text-align: left;
+	} 
+
+	.btns {
+		display: flex;
+		flex-direction: row;
+		margin-top: 5px;
+	}
+
+	.theBtn {
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		padding: 6px;
+		margin-right: 8px;
+	}
+
+	.theBtn:hover {
+		background-color: lightblue;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>血氧偵測</h1>
+
+		<div class="content">
+			<h2>運作原理</h2>
+			<p class="content1">血氧監測功能，透過紅色光線的LED與紅外線，穿過皮膚照在手腕上的血管上，以血液顏色測量，來計算血液的微量體積變化，進而判斷血氧濃度的約略值。這個數值被稱為血氧飽和度，用於衡量血液中能夠攜帶氧氣的紅血球的比例。</br>血氧飽和度正常值：95%~100%</br>SpO2 指的是周邊微血管的血氧飽和度，利用「氧合血紅素」與「血紅素」吸光值不同，用波長 660nm 和波長 940nm 的光所測到的數據SpO2 = 氧合血紅素 / (氧合血紅素 + 還原血紅素)</p>
+
+			<img src="ex2.jpg" alt="error" height="36%" width="36%">
+
+			<p class="content1">若偵測到血氧飽和度小於95%，智能手錶將發出警示並聯絡緊急聯絡人，再利用AI數據列出血氧過低可能造成之影響以及相關資訊傳輸給緊急聯絡人，使長者的健康問題能被及早發現，並盡速做出應對措施。</p>
+		</div>
+
+		<div class="content">
+			<h2>困難</h2>
+			<ul class="content1">
+				<li>血氧手錶的準確度會依據穿戴時的鬆緊度、位置、皮膚顏色與毛髮而有所影響。</li>
+				<li>血氧飽和度是健康與許多疾病（例如心臟疾病和呼吸道疾病）的重要指標。然而，智能手錶血氧測量功能不是醫療設備，它不能診斷疾病，而僅僅提供一種參考數據，讓長者家人能對長者的健康狀態有所掌握，隨時做好準備，並視情況決定是否就醫。</li>
+			</ul>
+    	</div>
+
+    	<div class="btns">
+			<button class="theBtn" id="last">Last Page</button>
+			<button class="theBtn" id="homeBtn">Home</button>
+			<button class="theBtn" id="next">Next Page</button>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var home = document.getElementById("homeBtn");
+		home.addEventListener("click", backToHome);
+		function backToHome() {
+			window.location.assign("file:///Users/zhengyujie/Desktop/group4_final%20project.html");
+		}
+
+		var next = document.getElementById("last");
+		next.addEventListener("click", lastPage);
+		function lastPage() {
+			window.location.assign("file:///Users/zhengyujie/Desktop/example1.html");
+		}
+
+		var next = document.getElementById("next");
+		next.addEventListener("click", nextPage);
+		function nextPage() {
+			window.location.assign("file:///Users/zhengyujie/Desktop/future.html");
+		}
+
+	</script>
+</body>
+</html>
